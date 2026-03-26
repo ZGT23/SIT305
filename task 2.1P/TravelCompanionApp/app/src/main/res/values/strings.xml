@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TravelCompanionApp</string>
+    <string name="app_title">Travel Companion Converter</string>
+    <string name="category_label">Category</string>
+    <string name="from_label">From</string>
+    <string name="to_label">To</string>
+    <string name="value_label">Value</string>
+    <string name="value_hint">Enter a number</string>
+    <string name="convert_button">Convert</string>
+    <string name="result_placeholder">Result will appear here</string>
+    <string name="error_empty">Please enter a value</string>
+    <string name="error_invalid">Please enter a valid number</string>
+    <string name="error_negative_fuel">Fuel / volume / distance values cannot be negative</string>
+    <string name="error_not_supported">Conversion not supported for this unit pair</string>
+    <string name="same_unit_message">Source and destination are the same</string>
+</resources>

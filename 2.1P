@@ -1,0 +1,41 @@
+# SIT305 Task 2.1P - Travel Companion Converter
+
+## Project Description
+
+This project is an Android application developed using Java in Android Studio.  
+The app provides simple conversion functions including currency, temperature, and fuel conversions.
+
+---
+
+## Features
+
+- Currency conversion (e.g. USD to AUD)
+- Temperature conversion (Celsius, Fahrenheit, Kelvin)
+- Fuel conversion
+- Simple and user-friendly interface
+
+---
+
+## Technologies Used
+
+- Java
+- Android Studio
+- XML (for UI design)
+- ConstraintLayout
+
+---
+
+## How to Run
+
+1. Open the project in Android Studio  
+2. Sync Gradle and build the project  
+3. Run the app on an emulator or physical device  
+
+---
+
+## Project Structure
+
+- `MainActivity.java` → Handles the main logic and conversion functions  
+- `activity_main.xml` → Defines the user interface  
+- `strings.xml` → Stores text resources  
+

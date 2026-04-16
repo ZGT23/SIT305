@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SportsNewsFeed</string>
+    <string name="sports_feed">Sports Feed</string>
+    <string name="featured_matches">Featured Matches</string>
+    <string name="latest_news">Latest News</string>
+    <string name="related_stories">Related Stories</string>
+    <string name="my_bookmarks">My Bookmarks</string>
+    <string name="no_bookmarks_yet">No bookmarks yet</string>
+    <string name="back">Back</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="search_hint">Search by category (Football, Basketball...)</string>
+</resources>

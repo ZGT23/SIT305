@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="643f59c6-19bd-49b4-9a81-e39b2e82574f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.idea/AndroidProjectSystem.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/androidTest/java/com/example/learningassistant/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/java/com/example/learningassistant/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/app/src/test/java/com/example/learningassistant/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LearningAssistant/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task_5.1C/iStream/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_5.1C/iStream/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task_5.1C/iStream/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_5.1C/iStream/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3CkH3LYLFzHcjpi2xml5n2rBXkt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/AndroidStudioProjects/SIT305/task_6.1D&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="643f59c6-19bd-49b4-9a81-e39b2e82574f" name="Changes" comment="" />
+      <created>1776922450036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776922450036</updated>
+    </task>
+    <servers />
+  </component>
+</project>

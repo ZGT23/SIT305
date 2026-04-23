@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome,"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:layout_marginTop="64dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student!"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lets Start Learning!"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="48dp" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="Username"
+            android:paddingHorizontal="16dp"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorSubtext"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Username input field" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="Password"
+            android:paddingHorizontal="16dp"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorSubtext"
+            android:textSize="16sp"
+            android:layout_marginBottom="28dp"
+            android:contentDescription="Password input field" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Login"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:contentDescription="Login button" />
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need an Account?"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:contentDescription="Register new account" />
+
+    </LinearLayout>
+</ScrollView>

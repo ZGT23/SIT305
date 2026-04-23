@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Learning Assistant</string>
+    <string name="login">Login</string>
+    <string name="need_account">Need an Account?</string>
+    <string name="generate_study_plan">Generate 7-Day Study Plan</string>
+    <string name="next">Next</string>
+    <string name="submit">Submit</string>
+    <string name="continue_btn">Continue</string>
+    <string name="explain_answer">Explain Answer</string>
+    <string name="your_results">Your Results</string>
+</resources>

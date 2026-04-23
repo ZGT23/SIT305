@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_result_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Question -->
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Status (Correct / Incorrect) -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓ Correct"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Your answer -->
+        <TextView
+            android:id="@+id/tvYourAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your answer: ..."
+            android:textColor="@color/colorSubtext"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Correct answer -->
+        <TextView
+            android:id="@+id/tvCorrectAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correct answer: ..."
+            android:textColor="@color/colorSubtext"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Explain button -->
+        <Button
+            android:id="@+id/btnExplain"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Explain Answer"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:contentDescription="Explain why this answer is correct or incorrect" />
+
+        <!-- Loading -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <!-- Prompt sent to AI -->
+        <TextView
+            android:id="@+id/tvPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ai_response"
+            android:padding="10dp"
+            android:textColor="@color/colorSubtext"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+        <!-- AI Response -->
+        <TextView
+            android:id="@+id/tvAiResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_selected"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <!-- Error -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorError"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

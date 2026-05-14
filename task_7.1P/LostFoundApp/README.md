@@ -39,6 +39,4 @@ To run this project locally, you must provide your own Google Maps API Key:
 
 *Note: The `local.properties` file is ignored by Git to prevent your API key from being leaked.*
 
-## AI Usage Declaration
 
-*This project was developed with the assistance of AI tools to implement the Google Maps API integration, distance calculation logic, and secure gradle configuration.*

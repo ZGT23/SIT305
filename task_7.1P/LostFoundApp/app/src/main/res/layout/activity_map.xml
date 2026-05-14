@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The map remains full screen -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Moved the filter bar to the bottom of the screen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#DDFFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:elevation="8dp">
+
+        <EditText
+            android:id="@+id/etRadius"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search Radius (km)"
+            android:inputType="numberDecimal"
+            android:autofillHints="none" />
+
+        <Button
+            android:id="@+id/btnApplyRadius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>

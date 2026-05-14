@@ -16,21 +16,21 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnCreateAdvert = findViewById(R.id.btnCreateAdvert);
         Button btnShowItems = findViewById(R.id.btnShowItems);
+        Button btnShowOnMap = findViewById(R.id.btnShowOnMap);
 
-        btnCreateAdvert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CreateAdvertActivity.class);
-                startActivity(intent);
-            }
+        btnCreateAdvert.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CreateAdvertActivity.class);
+            startActivity(intent);
         });
 
-        btnShowItems.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AdvertListActivity.class);
-                startActivity(intent);
-            }
+        btnShowItems.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AdvertListActivity.class);
+            startActivity(intent);
+        });
+
+        btnShowOnMap.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MapActivity.class);
+            startActivity(intent);
         });
     }
 }

@@ -1,70 +1,44 @@
-# Lost and Found App (Task 7.1P)
+# Lost and Found Map App (Task 9.1P)
 
-A native Android application built for **SIT305 - Mobile Application Development**. This app allows users to create, view, and manage advertisements for lost and found items. It uses a local SQLite database for data persistence and supports image selection from the device gallery.
+An advanced version of the Lost and Found application built for **SIT305 - Mobile Application Development**. This version extends the original functionality by integrating Google Maps, geolocation services, and radius-based searching.
 
-## Features
+## New Features (9.1P Upgrade)
 
-- **Home Screen**: Quick access to create new adverts or view the list of items.
-- **Create Advert**: 
-  - Choose between "Lost" and "Found" types.
-  - Input details: Name, Phone, Description, and Location.
-  - Select category from a dropdown (Electronics, Pets, Wallets, etc.).
-  - Upload an image from the gallery.
-  - Automatic timestamp generation for each post.
-- **Items List**: 
-  - Display all items in a RecyclerView with thumbnails.
-  - Filter items by category using a Spinner.
-- **Item Details**: 
-  - View full details and the full-sized image of a selected item.
-  - Remove/Delete an item once it has been returned.
-- **Data Persistence**: All data is stored locally using SQLite.
+- **Map View**: Visualize all lost and found items as markers on an interactive Google Map.
+- **Location Autocomplete**: integrated Google Places SDK to provide accurate address suggestions during post creation.
+- **GPS Integration**: Fetch the user's precise current location using the device's GPS.
+- **Radius-Based Search**: Filter map markers to show only items within a user-defined distance (in kilometers) from their current position.
+- **Secure Key Management**: Uses the `Secrets Gradle Plugin` to keep API keys safe and out of version control (GitHub).
 
 ## Technologies Used
 
-- **Language**: Java
-- **UI Framework**: XML (Android Views)
-- **Database**: SQLite (`SQLiteOpenHelper`)
-- **Image Handling**: Android Photo Picker / GetContent API
-- **Target SDK**: API 36 (Minimum SDK 24)
+- **Maps & Location**: Google Maps SDK, Google Places SDK, FusedLocationProviderClient.
+- **Database**: SQLite (Updated schema with Latitude and Longitude support).
+- **Architecture**: Java with XML Layouts.
+- **Security**: Secrets Gradle Plugin for Android.
 
 ## Project Structure
 
 ```text
 com.example.lostfoundapp
-├── MainActivity.java        # Entry point with main navigation
-├── CreateAdvertActivity.java # Form for creating new posts
-├── AdvertListActivity.java   # Scrollable list with category filtering
-├── AdvertDetailActivity.java # Full details and delete functionality
-├── data
-│   └── DatabaseHelper.java   # SQLite database management
-├── model
-│   └── Advert.java           # Data model for a Lost/Found item
-└── adapter
-    └── AdvertAdapter.java    # RecyclerView adapter for the list
+├── MapActivity.java           # New activity for the Google Map view
+├── CreateAdvertActivity.java  # Updated with Places Autocomplete & GPS
+├── data/DatabaseHelper.java   # Database updated for Geo-coordinates
+└── ... (Standard 7.1P files)
 ```
 
-## SQLite Database Explanation
+## Setup Instructions
 
-The application uses a database named `lost_found_db` with a table `adverts`. 
-Fields include:
-- `id`: Primary key (Integer)
-- `type`: "Lost" or "Found"
-- `name`: Contact person's name
-- `phone`: Contact number
-- `description`: Detailed description of the item
-- `category`: Item category for filtering
-- `location`: Where the item was lost/found
-- `image_uri`: Local URI string for the selected image
-- `timestamp`: Date and time when the advert was created
+To run this project locally, you must provide your own Google Maps API Key:
 
-## How to Run
+1. Obtain an API Key from the [Google Cloud Console](https://console.cloud.google.com/).
+2. Enable **Maps SDK for Android** and **Places API**.
+3. In your project root, open or create a file named `local.properties`.
+4. Add your key: `MAPS_API_KEY=YOUR_REAL_API_KEY_HERE`.
+5. **Sync Gradle** and run the app. 
 
-1. Open the project in **Android Studio**.
-2. Sync the project with **Gradle** files.
-3. Run the application on an **Android Emulator** (API 24 or above) or a physical device.
-4. To test the image upload on an emulator:
-   - Drag and drop an image file (.jpg/.png) onto the emulator.
-   - The image will be saved to the `Downloads` folder.
-   - Use the "Select Image" button in the app to pick it.
+*Note: The `local.properties` file is ignored by Git to prevent your API key from being leaked.*
 
+## AI Usage Declaration
 
+*This project was developed with the assistance of AI tools to implement the Google Maps API integration, distance calculation logic, and secure gradle configuration.*

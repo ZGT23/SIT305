@@ -59,7 +59,16 @@
             android:id="@+id/etLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Location"
+            android:hint="Location (Tap for Autocomplete)"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnGetCurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Current Location"
             android:layout_marginBottom="8dp" />
 
         <Spinner
@@ -74,7 +83,8 @@
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:background="#EEEEEE"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Selected Item Image" />
 
         <Button
             android:id="@+id/btnSelectImage"

@@ -10,6 +10,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@android:drawable/ic_menu_search"
+        android:contentDescription="App Logo"
         android:layout_marginBottom="32dp"/>
 
     <Button
@@ -23,6 +24,13 @@
         android:id="@+id/btnShowItems"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show Lost and Found Items" />
+        android:text="Show Lost and Found Items"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnShowOnMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show On Map" />
 
 </LinearLayout>

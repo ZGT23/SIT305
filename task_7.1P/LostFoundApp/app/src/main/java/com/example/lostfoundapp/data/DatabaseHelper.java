@@ -14,7 +14,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "lost_found_db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2; // Increment version for schema change
 
     private static final String TABLE_ADVERTS = "adverts";
     private static final String COLUMN_ID = "id";
@@ -26,6 +26,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_LOCATION = "location";
     private static final String COLUMN_IMAGE_URI = "image_uri";
     private static final String COLUMN_TIMESTAMP = "timestamp";
+    private static final String COLUMN_LATITUDE = "latitude";
+    private static final String COLUMN_LONGITUDE = "longitude";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -42,14 +44,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + COLUMN_CATEGORY + " TEXT,"
                 + COLUMN_LOCATION + " TEXT,"
                 + COLUMN_IMAGE_URI + " TEXT,"
-                + COLUMN_TIMESTAMP + " TEXT" + ")";
+                + COLUMN_TIMESTAMP + " TEXT,"
+                + COLUMN_LATITUDE + " REAL,"
+                + COLUMN_LONGITUDE + " REAL" + ")";
         db.execSQL(CREATE_ADVERTS_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_ADVERTS);
-        onCreate(db);
+        if (oldVersion < 2) {
+            db.execSQL("ALTER TABLE " + TABLE_ADVERTS + " ADD COLUMN " + COLUMN_LATITUDE + " REAL DEFAULT 0.0");
+            db.execSQL("ALTER TABLE " + TABLE_ADVERTS + " ADD COLUMN " + COLUMN_LONGITUDE + " REAL DEFAULT 0.0");
+        }
     }
 
     public long insertAdvert(Advert advert) {
@@ -63,6 +69,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_LOCATION, advert.getLocation());
         values.put(COLUMN_IMAGE_URI, advert.getImageUri());
         values.put(COLUMN_TIMESTAMP, advert.getTimestamp());
+        values.put(COLUMN_LATITUDE, advert.getLatitude());
+        values.put(COLUMN_LONGITUDE, advert.getLongitude());
 
         long id = db.insert(TABLE_ADVERTS, null, values);
         db.close();
@@ -87,6 +95,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 advert.setLocation(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_LOCATION)));
                 advert.setImageUri(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_IMAGE_URI)));
                 advert.setTimestamp(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TIMESTAMP)));
+                advert.setLatitude(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_LATITUDE)));
+                advert.setLongitude(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_LONGITUDE)));
                 advertList.add(advert);
             } while (cursor.moveToNext());
         }
@@ -113,6 +123,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 advert.setLocation(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_LOCATION)));
                 advert.setImageUri(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_IMAGE_URI)));
                 advert.setTimestamp(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TIMESTAMP)));
+                advert.setLatitude(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_LATITUDE)));
+                advert.setLongitude(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_LONGITUDE)));
                 advertList.add(advert);
             } while (cursor.moveToNext());
         }
@@ -137,6 +149,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             advert.setLocation(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_LOCATION)));
             advert.setImageUri(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_IMAGE_URI)));
             advert.setTimestamp(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TIMESTAMP)));
+            advert.setLatitude(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_LATITUDE)));
+            advert.setLongitude(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_LONGITUDE)));
             cursor.close();
             db.close();
             return advert;

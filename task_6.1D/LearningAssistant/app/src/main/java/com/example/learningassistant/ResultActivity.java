@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.learningassistant.adapter.ResultAdapter;
+import com.example.learningassistant.model.QuizHistory;
 import com.example.learningassistant.model.QuizQuestion;
 import com.example.learningassistant.util.OpenAIService;
+import com.example.learningassistant.util.SharedPrefManager;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,17 +20,33 @@ public class ResultActivity extends AppCompatActivity {
 
     private ResultAdapter adapter;
     private List<QuizQuestion> questions;
+    private SharedPrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        prefManager = SharedPrefManager.getInstance(this);
         questions = (ArrayList<QuizQuestion>) getIntent().getSerializableExtra("questions");
         String topic = getIntent().getStringExtra("topic");
 
+        int correctCount = 0;
+        for (QuizQuestion q : questions) {
+            if (q.isCorrect()) correctCount++;
+        }
+
+        // Save results for 10.1D
+        prefManager.updateStats(correctCount, questions.size() - correctCount);
+        prefManager.saveQuizHistory(new QuizHistory(topic != null ? topic : "Quiz", correctCount, questions.size()));
+
         TextView tvHeader = findViewById(R.id.tvHeader);
         if (topic != null) tvHeader.setText(topic + " - Results");
+
+        TextView tvScore = findViewById(R.id.tvScore);
+        if (tvScore != null) {
+            tvScore.setText("Score: " + correctCount + " / " + questions.size());
+        }
 
         RecyclerView rvResults = findViewById(R.id.rvResults);
         Button btnContinue = findViewById(R.id.btnContinue);

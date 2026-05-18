@@ -39,6 +39,7 @@ public class DashboardActivity extends AppCompatActivity {
         tvStudyPlanError = findViewById(R.id.tvStudyPlanError);
         progressStudyPlan = findViewById(R.id.progressStudyPlan);
         Button btnLogout = findViewById(R.id.btnLogout);
+        Button btnProfile = findViewById(R.id.btnProfile);
 
         String username = prefManager.getUsername();
         tvGreeting.setText("Hello,\n" + username);
@@ -55,6 +56,10 @@ public class DashboardActivity extends AppCompatActivity {
         rvTasks.setAdapter(adapter);
 
         btnStudyPlan.setOnClickListener(v -> generateStudyPlan());
+
+        btnProfile.setOnClickListener(v -> {
+            startActivity(new Intent(this, ProfileActivity.class));
+        });
 
         btnLogout.setOnClickListener(v -> {
             prefManager.logout();

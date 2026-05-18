@@ -28,6 +28,9 @@
         <activity android:name=".DashboardActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".ResultActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".UpgradeActivity" />
 
     </application>
 

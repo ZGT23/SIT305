@@ -12,11 +12,7 @@ plugins {
 
 android {
     namespace = "com.example.learningassistant"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.learningassistant"
@@ -62,6 +58,7 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.recyclerview)
     implementation(libs.cardview)
+    implementation(libs.zxing)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
